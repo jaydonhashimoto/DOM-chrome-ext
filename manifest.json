@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "DOM Chrome Ext",
+  "description": "DOM stuff",
+  "version": "1.0.0",
+  "icons": { "128": "icon_128.png" },
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": ["https://some-random-api.ml/*"]
+}
